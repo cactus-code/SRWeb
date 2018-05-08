@@ -1,8 +1,7 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_login import current_user, login_user, logout_user, login_required
-from app import app
-from app import db
-from app.forms import LoginForm, GameForm, RegistrationForm
+from app import app, db
+from app.forms import LoginForm, GameForm, RegistrationForm, EditProfileForm
 from app.models import User
 from werkzeug.urls import url_parse
 
@@ -53,7 +52,26 @@ def submit():
     form = GameForm()
     return render_template('submit.html', title='Submit', form=form)
 
-@app.route('/profile')
+@app.route('/profile/<username>')
 @login_required
-def profile():
-    return render_template('profile.html', title=current_user.username)
+def profile(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    games = [
+        {'match_outcome': 'Win', 'sr_after_game': '2602', 'map': 'Numbani'},
+        {'match_outcome': 'Loss', 'sr_after_game': '2626', 'map': 'Volskaya Industries'}
+    ]
+    return render_template('profile.html', title=current_user.username,
+                           user=user, games=games)
+
+@app.route('/edit_profile', methods=['GET', 'POST'])
+@login_required
+def edit_profile():
+    form = EditProfileForm()
+    if form.validate_on_submit():
+        current_user.username = form.username.data
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('edit_profile'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+    return render_template('edit_profile.html', title='Edit Profile', form=form)

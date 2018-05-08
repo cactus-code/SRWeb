@@ -26,7 +26,9 @@ class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     map = db.Column(db.String(100))
     sr_after_game = db.Column(db.Integer)
+    match_outcome = db.Column(db.String(10))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return '<Game {} - {}>'.format(self.map,self.sr_after_game)
+        return '<Game {}SR: {} on {}>'.format(self.sr_after_game,
+                                              self.match_outcome,self.map)

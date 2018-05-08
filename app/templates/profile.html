@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-	
+	<h1>User: {{ user.username }}</h1>
+	{% if user == current_user %}
+	<p><a href="{{ url_for('edit_profile') }}">Change Username</a></p>
+	{% endif %}
+	<hr>
+	<h2>User's Games:</h2>
+	{% for game in games %}
+	<p>
+	{{ game.sr_after_game }} : {{ game.match_outcome }} on {{ game.map }}
+	</p>
+	{% endfor %}
 {% endblock %}

@@ -13,7 +13,7 @@
 			<a href="{{ url_for('logout') }}">Log Out</a>
 			{% endif %}
 			<a href="{{ url_for('submit') }}">Submit Game</a>
-			<a href="{{ url_for('profile') }}">Your Profile</a>
+			<a href="{{ url_for('profile', username=current_user.username) }}">Your Profile</a>
 		</div>
 		<hr>
 		{% with messages = get_flashed_messages() %}
