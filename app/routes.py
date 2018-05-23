@@ -2,7 +2,7 @@ from flask import render_template, flash, redirect, url_for, request
 from flask_login import current_user, login_user, logout_user, login_required
 from app import app, db
 from app.forms import LoginForm, GameForm, RegistrationForm, EditProfileForm
-from app.models import User
+from app.models import User, Game
 from werkzeug.urls import url_parse
 
 @app.route('/')
@@ -50,16 +50,20 @@ def register():
 @login_required
 def submit():
     form = GameForm()
-    return render_template('submit.html', title='Submit', form=form)
+    if form.validate_on_submit():
+        game = Game(map=form.map.data, sr_after_game=form.sr_after_game.data,
+                    match_outcome=form.match_outcome.data,
+                    author=User.query.filter_by(username=current_user.username))
+        db.session.add(game)
+        db.session.commit()
+        flash('Game has been added to your records.')
+    return render_template('submit.html', title='Submit Game', form=form)
 
 @app.route('/profile/<username>')
 @login_required
 def profile(username):
     user = User.query.filter_by(username=username).first_or_404()
-    games = [
-        {'match_outcome': 'Win', 'sr_after_game': '2602', 'map': 'Numbani'},
-        {'match_outcome': 'Loss', 'sr_after_game': '2626', 'map': 'Volskaya Industries'}
-    ]
+
     return render_template('profile.html', title=current_user.username,
                            user=user, games=games)
 
