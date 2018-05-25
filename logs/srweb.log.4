@@ -1,0 +1,129 @@
+2018-05-25 20:49:07,376 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 20:57:32,681 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 20:59:56,533 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 21:00:11,664 ERROR: Exception on /profile/ [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 65, in default_profile
+    return redirect(url_for('profile'), username=current_user.username)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'profile'. Did you forget to specify values ['username']?
+2018-05-25 21:21:04,011 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 21:21:30,532 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 21:21:47,465 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 73, in profile
+    user=user, games=games)
+NameError: name 'games' is not defined
+2018-05-25 21:22:00,258 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 73, in profile
+    user=user, games=games)
+NameError: name 'games' is not defined
+2018-05-25 21:22:01,668 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 73, in profile
+    user=user, games=games)
+NameError: name 'games' is not defined
+2018-05-25 21:22:02,589 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 73, in profile
+    user=user, games=games)
+NameError: name 'games' is not defined
+2018-05-25 21:22:03,449 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 73, in profile
+    user=user, games=games)
+NameError: name 'games' is not defined

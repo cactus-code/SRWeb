@@ -1,0 +1,98 @@
+2018-05-25 21:33:18,979 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 72, in profile
+    games = Game.query.filter_by(author=current_user.username)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1632, in filter_by
+    for key, value in kwargs.items()]
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1632, in <listcomp>
+    for key, value in kwargs.items()]
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\sql\operators.py", line 344, in __eq__
+    return self.operate(eq, other)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 180, in operate
+    return op(self.comparator, *other, **kwargs)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1039, in __eq__
+    other, adapt_source=self.adapter))
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1372, in _optimized_compare
+    state = attributes.instance_state(state)
+AttributeError: 'str' object has no attribute '_sa_instance_state'
+2018-05-25 21:33:26,718 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 21:33:29,426 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 72, in profile
+    games = Game.query.filter_by(author=current_user.username)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1632, in filter_by
+    for key, value in kwargs.items()]
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1632, in <listcomp>
+    for key, value in kwargs.items()]
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\sql\operators.py", line 344, in __eq__
+    return self.operate(eq, other)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 180, in operate
+    return op(self.comparator, *other, **kwargs)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1039, in __eq__
+    other, adapt_source=self.adapter))
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1372, in _optimized_compare
+    state = attributes.instance_state(state)
+AttributeError: 'str' object has no attribute '_sa_instance_state'
+2018-05-25 21:34:34,634 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 21:34:46,251 ERROR: Exception on /profile/tntwizardx [GET] [in c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Bob\Desktop\Programming\SRWeb\app\routes.py", line 72, in profile
+    games = Game.query.filter_by(author=current_user.username)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1632, in filter_by
+    for key, value in kwargs.items()]
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1632, in <listcomp>
+    for key, value in kwargs.items()]
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\sql\operators.py", line 344, in __eq__
+    return self.operate(eq, other)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 180, in operate
+    return op(self.comparator, *other, **kwargs)
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1039, in __eq__
+    other, adapt_source=self.adapter))
+  File "c:\users\bob\desktop\programming\srweb\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1372, in _optimized_compare
+    state = attributes.instance_state(state)
+AttributeError: 'str' object has no attribute '_sa_instance_state'
+2018-05-25 21:35:03,154 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 21:37:12,576 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-25 21:53:30,544 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]

@@ -13,7 +13,7 @@ class GameForm(FlaskForm):
     map = StringField('Map Name', validators=[DataRequired()])
     sr_after_game = StringField('SR After Game', validators=[DataRequired()])
     match_outcome = StringField('Match Outcome', validators=[DataRequired()])
-    submit = SubmitField('Register')
+    submit = SubmitField('Submit Game Info')
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])

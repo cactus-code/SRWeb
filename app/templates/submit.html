@@ -4,6 +4,27 @@
 	<h1>Submit Game</h1>
 	<form action="" method="post">
 		{{ form.hidden_tag() }}
-		
+		<p>
+			{{ form.map.label }}<br>
+			{{ form.map(size=32) }}<br>
+			{% for error in form.map.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+		</p>
+		<p>
+			{{ form.sr_after_game.label }}<br>
+			{{ form.sr_after_game(size=4) }}<br>
+			{% for error in form.sr_after_game.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+		</p>
+		<p>
+			{{ form.match_outcome.label }}<br>
+			{{ form.match_outcome(size=32) }}<br>
+			{% for error in form.match_outcome.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+		</p>
+		<p>{{ form.submit() }}</p>
 	</form>
 {% endblock %}
