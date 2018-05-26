@@ -37,3 +37,4 @@ Traceback (most recent call last):
     child_state, child_dict = instance_state(child),\
 AttributeError: 'BaseQuery' object has no attribute '_sa_instance_state'
 2018-05-26 00:55:10,363 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]
+2018-05-26 12:49:12,233 INFO: SRWeb startup [in C:\Users\Bob\Desktop\Programming\SRWeb\app\__init__.py:45]

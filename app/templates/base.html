@@ -1,11 +1,10 @@
 <html>
     <head>
 		<title>{{ title }}</title>
-		<link rel="stylesheet" type="text/css" href="base.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/base.css">
     </head>
     <body>
 		<div class="topnav">
-			<b>SRWeb:</b>
 			<a href="{{ url_for('index') }}">Home</a>
 			{% if current_user.is_anonymous %}
 			<a href="{{ url_for('login') }}">Log In</a>
